@@ -4,4 +4,3 @@ phases:
   build:
     commands:
       - echo Entering Build Phase
-      - docker build -t ss-pilot-app:v1 .
