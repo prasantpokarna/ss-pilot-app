@@ -1,10 +1,6 @@
 version: 0.2
 
 phases:
-  install:
-    commands:
-      - echo Entering Install Phase
-      - sudo systemctl start docker
   build:
     commands:
       - echo Entering Build Phase
