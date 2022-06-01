@@ -5,6 +5,7 @@ phases:
     commands:
       - echo Entering Build Phase
       - docker --version
+      - systemctl status docker
       - docker build -t ss-pilot-app .
 
 artifacts:
