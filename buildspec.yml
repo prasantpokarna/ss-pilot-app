@@ -1,11 +1,16 @@
 version: 0.2
 
 phases:
+  install: 
+    commands:
+      - echo Entering Install Phase
+      - sudo service docker status
+      - sudo systemctl status docker
   build:
     commands:
       - echo Entering Build Phase
       - docker --version
-      - systemctl status docker
+      - pwd
       - docker build -t ss-pilot-app .
 
 artifacts:
