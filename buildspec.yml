@@ -1,12 +1,16 @@
 version: 0.2
 
 phases:
+  install: 
+    commands:
+      - echo Entering Install Phase
   build:
     commands:
       - echo Entering Build Phase
       - docker --version
       - pwd
       - ls -a
+      - docker run -v /var/run/docker.sock:/var/run/docker.sock -ti docker
       - docker build -t ss-pilot-app .
 
 artifacts:
