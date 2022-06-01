@@ -4,13 +4,12 @@ phases:
   install: 
     commands:
       - echo Entering Install Phase
-      - sudo service docker status
-      - sudo systemctl status docker
   build:
     commands:
       - echo Entering Build Phase
       - docker --version
       - pwd
+      - ls -a
       - docker build -t ss-pilot-app .
 
 artifacts:
