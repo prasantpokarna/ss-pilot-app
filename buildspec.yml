@@ -10,7 +10,10 @@ phases:
       - docker --version
       - pwd
       - ls -a
-      - docker build -t ss-pilot-app .
+      #- aws ecr get-login-password --region us-east-2 | docker login --username prashant-datamato --password-stdin 350031543021.dkr.ecr.us-east-2.amazonaws.com
+      - docker build -t ssapi-ecr-test .
+      - docker tag ssapi-ecr-test:latest 350031543021.dkr.ecr.us-east-2.amazonaws.com/ssapi-ecr-test:latest
+      - docker push 350031543021.dkr.ecr.us-east-2.amazonaws.com/ssapi-ecr-test:latest
 
 artifacts:
   files:
