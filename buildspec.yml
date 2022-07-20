@@ -13,9 +13,9 @@ phases:
       - echo $(aws ecr get-login-password)
       #- echo $(aws ecr get-login-password) | docker login --username prashant-datamato --password-stdin 350031543021.dkr.ecr.us-east-2.amazonaws.com
       - docker login -u AWS -p $(aws ecr get-login-password) https://350031543021.dkr.ecr.us-east-2.amazonaws.com
-      - docker build -t ssapi-lambs-ecr-test .
-      - docker tag ssapi-lambs-ecr-test:latest 350031543021.dkr.ecr.us-east-2.amazonaws.com/ssapi-lambs-ecr-test:latest
-      - docker push 350031543021.dkr.ecr.us-east-2.amazonaws.com/ssapi-lambs-ecr-test:latest
+      - docker build -t ssapi-ecr-stage .
+      - docker tag ssapi-ecr-stage:latest 350031543021.dkr.ecr.us-east-2.amazonaws.com/ssapi-ecr-stage:latest
+      - docker push 350031543021.dkr.ecr.us-east-2.amazonaws.com/ssapi-ecr-stage:latest
 
 #artifacts:
 #  files:
